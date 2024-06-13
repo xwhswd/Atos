@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>atos</groupId>
+        <artifactId>atos</artifactId>
+        <version>3.8.7</version>
+    </parent>
+
+    <groupId>com.bn</groupId>
+    <artifactId>atos-flowable</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <flwoable.version>6.8.0</flwoable.version>
+    </properties>
+
+    <dependencies>
+        <!--  flowable工作流依赖      -->
+        <dependency>
+            <groupId>org.flowable</groupId>
+            <artifactId>flowable-batch-service</artifactId>
+            <version>${flwoable.version}</version>
+        </dependency>
+
+        <!--   通用依赖     -->
+        <dependency>
+            <groupId>atos</groupId>
+            <artifactId>atos-common</artifactId>
+        </dependency>
+
+        <!--  flowable-ui      -->
+        <!-- 添加flowable-ui-modeler核心依赖项 -->
+        <dependency>
+            <groupId>org.flowable</groupId>
+            <artifactId>flowable-ui-modeler-rest</artifactId>
+            <version>${flwoable.version}</version>
+        </dependency>
+        <!--添加flowable-ui-modeler配置依赖项 -->
+        <dependency>
+            <groupId>org.flowable</groupId>
+            <artifactId>flowable-ui-modeler-conf</artifactId>
+            <version>${flwoable.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

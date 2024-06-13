@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: atos-file
+fdfs:
+  connect-timeout: 6000  #连接超时，默认60
+  so-timeout: 6000 #读取时间，默认60
+  # 生成缩略图参数
+  thumb-image:
+    enabled: true
+    width: 250
+    height: 150
+  #Tracte服务的ip和端口,多个可以用逗号隔开,或者通过nginx做一个负载均衡然后配置一个即可。
+  tracker-list: 192.168.94.128:22122
+server:
+  port: 9003
