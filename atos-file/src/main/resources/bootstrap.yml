@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: atos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # Nacos服务地址
+        namespace: atos # Nacos命名空间ID
+      config:
+        server-addr: localhost:8848 # Nacos作为配置中心地址
+        namespace: atos # Nacos命名空间ID
+        group: DEFAULT_GROUP # 配置分组名称
+        data-id: atos # 配置ID，通常与spring.application.name相同
+#        extension-configs:
+#          - data-id: another-data-id # 另一个配置ID
+#            group: ANOTHER_GROUP # 另一个配置分组名称
+        file-extension: yaml # 配置文件格式，默认为properties

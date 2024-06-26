@@ -87,7 +87,17 @@ spring:
         max-active: 8
         # #连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1ms
-
+  #nacos配置信息
+  cloud:
+    nacos:
+      discovery:
+        cluster-name: localhost:8848
+        namespace: atos
+      config:
+        server-addr: localhost:8848
+        namespace: atos
+        group: DEFAULT_GROUP
+        file-extension: yaml
 # token配置
 token:
   # 令牌自定义标识
@@ -127,3 +137,4 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
